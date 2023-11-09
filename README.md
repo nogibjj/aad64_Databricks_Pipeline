@@ -5,9 +5,8 @@ Data Pipeline with Databricks
 This week's mini project was designed to get a better grasp on using Databricks and creating a data pipeline in it. For the same, we followed a databricks [demo project](https://docs.databricks.com/en/getting-started/data-pipeline-get-started.html). 
 
 ## Objectives:
-[x] Create a data pipeline using Databricks
-
-[x] Include at least one data source and one data sink
+- [x] Create a data pipeline using Databricks
+- [x] Include at least one data source and one data sink
 
 ## Ingest Data (Initial):
 This was a notbeook created to load and see the data we would be working with in the rest of the project as seen below:
