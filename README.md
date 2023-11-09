@@ -6,6 +6,7 @@ This week's mini project was designed to get a better grasp on using Databricks 
 
 ## Objectives:
 [x] Create a data pipeline using Databricks
+
 [x] Include at least one data source and one data sink
 
 ## Ingest Data (Initial):
