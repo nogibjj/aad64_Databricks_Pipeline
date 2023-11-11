@@ -1,5 +1,12 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.types import DoubleType, IntegerType, StringType, StructType, StructField
+from pyspark.sql.types import (
+    DoubleType,
+    IntegerType,
+    StringType,
+    StructType,
+    StructField
+)
+
 
 # Create a Spark session
 spark = SparkSession.builder.appName("SongDataIngest").getOrCreate()
