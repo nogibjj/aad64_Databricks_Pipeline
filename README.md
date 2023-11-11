@@ -1,5 +1,6 @@
 # aad64_Databricks_Pipeline
 Data Pipeline with Databricks
+[![CI](https://github.com/nogibjj/aad64_Databricks_Pipeline/actions/workflows/actions.yml/badge.svg)](https://github.com/nogibjj/aad64_Databricks_Pipeline/actions/workflows/actions.yml)
 
 ## Summary:
 This week's mini project was designed to get a better grasp on using Databricks and creating a data pipeline in it. For the same, we followed a databricks [demo project](https://docs.databricks.com/en/getting-started/data-pipeline-get-started.html). 
