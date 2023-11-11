@@ -1,13 +1,15 @@
-# Databricks notebook source
+from pyspark.sql import SparkSession
 from pyspark.sql.types import DoubleType, IntegerType, StringType, StructType, StructField
+
+# Create a Spark session
+spark = SparkSession.builder.appName("SongDataIngest").getOrCreate()
 
 # Define variables used in the code below
 file_path = "/databricks-datasets/songs/data-001/"
 table_name = "raw_song_data"
 checkpoint_path = "/tmp/pipeline_get_started/_checkpoint/song_data"
 
-schema = StructType(
-  [
+schema = StructType([
     StructField("artist_id", StringType(), True),
     StructField("artist_lat", DoubleType(), True),
     StructField("artist_long", DoubleType(), True),
@@ -28,14 +30,14 @@ schema = StructType(
     StructField("title", StringType(), True),
     StructField("year", IntegerType(), True),
     StructField("partial_sequence", IntegerType(), True)
-  ]
-)
+])
 
+# Read stream and write to table
 (spark.readStream
   .format("cloudFiles")
   .schema(schema)
   .option("cloudFiles.format", "csv")
-  .option("sep","\t")
+  .option("sep", "\t")
   .load(file_path)
   .writeStream
   .option("checkpointLocation", checkpoint_path)
